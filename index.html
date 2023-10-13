@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="calcTime()">
+    <div class="text-editor">
+        <h1>Try TextUtils - word counter, character counter, sentences counter, remove extra spaces</h1>
+        <div id="search">
+            <input type="text" placeholder="search the word" id="search-bar">
+            <button type="button" onclick="searchBar()" id="search-button">Search</button>
+        </div>
+        <textarea id="text-box" rows="8" cols="8" value="Some Text..."></textarea>
+        <br>
+        <button class="des" type="button" onclick="forUpper()">Convert to Uppercase</button>
+        <button class="des" type="button" onclick="forLower()">Convert to lowercase</button>
+        <button class="des" type="button" onclick="cpyText()">copy text</button>
+        <button class="des" type="button" onclick="remvSpac()">Remove Extra Spaces</button>
+        <button class="des" type="button" onclick="clrText()">clear text</button>
+        <select id="font-family" onchange="changeFontStyle(this);">
+            <option value="Verdana" selected="selected">Verdana</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Times New Roman">Times New Roman</option>
+        </select>
+        <button class="des" type="button" onclick="bOld()" class="design">Bold Text</button>
+        <button class="des" type="button" onclick="iTalic()" class="design">italic Text</button>
+        <br>
+        <p id="para-print"></p><br><br>
+        <label id="time-t-read">0 minutes to read</label>
+        <p id="word-count">Total Sentences : 0 and Word Count : 0 and character length : 0</p>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

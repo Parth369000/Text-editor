@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#text-box{
+    width: 1150px;
+    
+}
+
+#search{
+    margin-top: 10px;
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+
+#search-button{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+#search-bar{
+    font-size: 18px;
+    width: 200px;
+}
+
+.des{
+    background-color: 0,0,0,0.5;
+    color: black;
+    font-size: 18px;
+}
+
+.text-editor{
+    margin-left: 10%;
+}
+
+.highlight{
+    color: red;
+}
+
