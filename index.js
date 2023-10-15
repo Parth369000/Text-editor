@@ -1,36 +1,36 @@
 
 
-function forUpper() {
+const forUpper = () => {
 var string=document.getElementById("text-box").value;
 
 document.getElementById("text-box").value=string.toUpperCase();
 }
 
 
-function forLower() {
+const forLower = () => {
     var string=document.getElementById("text-box").value;
     document.getElementById("text-box").value=string.toLowerCase();
 }
 
-function remvSpac() {
+const remvSpac = () => {
     var string=document.getElementById("text-box").value;
     var regexPattern= /\s+/g;
     document.getElementById("text-box").value = string.replace(/\s+/g, " ");
 }
 
-function cpyText() {
+const cpyText = () => {
     var string=document.getElementById("text-box");
     navigator.clipboard.writeText(string.value);
 }
 
-function clrText() {
+const clrText = () => {
     var string=document.getElementById("text-box").value;
     document.getElementById("text-box").value="";
     document.getElementById("search-bar").value="";
     document.getElementById("para-print").innerHTML="";
 }
 
-function calcTime() {
+const calcTime = () => {
 var string=document.getElementById("text-box").value;
 
 }
@@ -40,7 +40,7 @@ var wordCountElement = document.getElementById("word-count");
 var timeToread = document.getElementById("time-t-read");
 
 
-textBox.addEventListener("input", function() {
+textBox.addEventListener("input", () => {
     var text = textBox.value;
     var textLength = text.length;
     // const sentencesPattern = /[.!?](?:s|$)/g;
@@ -57,18 +57,18 @@ textBox.addEventListener("input", function() {
     wordCountElement.textContent = "Total Sentences : "+result+" and Word count: "+wordCount+" and character length : "+ textLength;
 });
 
-function countWords(text) {
+const countWords = (text) => {
     var words=text.split(/\s+/).filter(word => word.length > 0);
     return words.length;
 }
 
-function calculateReadingTime(text,wpm = 50) {
+const calculateReadingTime = (text,wpm = 50)  => {
     const wordCount =countWords(text);
     const minutes = wordCount / wpm;
     return minutes;
 }
 
-function searchBar() {
+const searchBar = () => {
     var textBox = document.getElementById("text-box");
     var searchTerm = document.getElementById("search-bar").value;
     var paraP = document.getElementById("para-print");
@@ -81,15 +81,15 @@ function searchBar() {
     paraP.innerHTML = highlightedText;
 }
 
-var changeFontStyle = function (font) {
+var changeFontStyle = (font) => {
     document.getElementById("text-box").style.fontFamily = font.value;
 }
 
-function bOld() {
+const bOld = () => {
     // var string=document.getElementById("text-box").innerHTML;
     document.getElementById("text-box").style.fontWeight="bold";
 }
 
-function iTalic() {
+const iTalic = () => {
     document.getElementById("text-box").style.fontStyle="italic";
 }
